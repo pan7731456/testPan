@@ -1,8 +1,7 @@
-package CircleQueue;
+package Queue.CircleQueue;
 
 import lombok.Data;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
