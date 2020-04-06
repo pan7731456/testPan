@@ -1,4 +1,4 @@
-package Stack;
+package Stack.StackPrototype;
 
 /**
  * @Author PYJ
@@ -7,12 +7,14 @@ package Stack;
  * @Version 1.0
  **/
 
+import java.lang.reflect.Array;
+
 /**
  * 分析：数组栈局限在于不符合栈的可扩展性，实际中应该是需要扩容操作，一般用链表的形式更好体现
  */
-public class StackArray implements Stack{
+public class StackArray<T> implements Stack<T>{
     private int top; //栈顶指标
-    private int[] values; //存储数据
+    private T[] values; //存储数据
 
     /**
      * 构造器，初始化数组栈
@@ -20,12 +22,12 @@ public class StackArray implements Stack{
      * @param maxSize 数组栈大小
      */
     public StackArray(int maxSize) {
-        this.values = new int[maxSize];
+        this.values = (T[]) Array.newInstance(StackArray.class, maxSize);
         this.top = -1;
     }
 
     @Override
-    public void push(int value) {
+    public void push(T value) {
         if (isFull()){
             throw new RuntimeException("栈已满，无法添加数据");
         }
@@ -33,7 +35,7 @@ public class StackArray implements Stack{
     }
 
     @Override
-    public int pop() {
+    public T pop() {
         if (isEmpty()){
             throw new RuntimeException("栈为空，无法取出数据");
         }
@@ -41,7 +43,7 @@ public class StackArray implements Stack{
     }
 
     @Override
-    public int head() {
+    public T head() {
         return values[top];
     }
 

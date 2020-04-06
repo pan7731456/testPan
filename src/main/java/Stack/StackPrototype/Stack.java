@@ -1,25 +1,25 @@
-package Stack;
+package Stack.StackPrototype;
 
-public interface Stack {
+public interface Stack<T> {
 
     /**
      * 栈中添加数据
      */
-    void push(int value);
+    void push(T value);
 
     /**
      * 栈中获取数据
      *
      * @return
      */
-    int pop();
+    T pop();
 
     /**
      * 栈顶数据
      *
      * @return
      */
-    int head();
+    T head();
 
     /**
      * 栈中数据大小

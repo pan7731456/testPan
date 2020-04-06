@@ -1,4 +1,4 @@
-package Stack;
+package Stack.StackPrototype;
 
 import lombok.Data;
 
@@ -8,22 +8,22 @@ import lombok.Data;
  * @Date 2020/4/620:13
  * @Version 1.0
  **/
-public class StackLinked implements Stack {
+public class StackLinked<T> implements Stack<T> {
     private Node head; //头节点
     private int size; //栈中有效数据
 
     @Data
     class Node{
-        private int value;
+        private T value;
         private Node next;
 
-        public Node(int value) {
+        public Node(T value) {
             this.value = value;
         }
     }
 
     @Override
-    public void push(int value) {
+    public void push(T value) {
         Node node = new Node(value);
         Node head = this.head; //取当前头节点
         this.head = node;
@@ -32,7 +32,7 @@ public class StackLinked implements Stack {
     }
 
     @Override
-    public int pop() {
+    public T pop() {
         if (isEmpty()){
             throw new RuntimeException("栈为空，无法取出数据");
         }
@@ -43,7 +43,7 @@ public class StackLinked implements Stack {
     }
 
     @Override
-    public int head() {
+    public T head() {
         return this.head.value;
     }
 

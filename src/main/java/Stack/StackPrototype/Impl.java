@@ -1,4 +1,6 @@
-package Stack;
+package Stack.StackPrototype;
+
+import java.util.Stack;
 
 /**
  * @Author PYJ
@@ -8,7 +10,8 @@ package Stack;
  **/
 public class Impl {
     public static void main(String[] args) {
-        StackLinked stackArray = new StackLinked();
+        StackArray stackArray = new StackArray(10);
+        //StackLinked stackArray = new StackLinked();
         for (int i = 0; i < 10; i++) {
             stackArray.push(i);
         }
