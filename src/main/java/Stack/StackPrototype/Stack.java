@@ -19,7 +19,7 @@ public interface Stack<T> {
      *
      * @return
      */
-    T head();
+    T peek();
 
     /**
      * 栈中数据大小

@@ -43,7 +43,7 @@ public class StackLinked<T> implements Stack<T> {
     }
 
     @Override
-    public T head() {
+    public T peek() {
         return this.head.value;
     }
 
@@ -61,7 +61,7 @@ public class StackLinked<T> implements Stack<T> {
         Node head = this.head;
 
         for (int index = 1; head != null ; index++, head= head.next) {
-            System.out.printf("第%d个数据为%d\n", index, head.value);
+            System.out.println("第"+ index + "个数据为"+ head.value);
         }
     }
 

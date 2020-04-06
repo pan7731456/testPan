@@ -43,7 +43,7 @@ public class StackArray<T> implements Stack<T>{
     }
 
     @Override
-    public T head() {
+    public T peek() {
         return values[top];
     }
 
