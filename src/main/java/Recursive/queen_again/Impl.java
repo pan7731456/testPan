@@ -1,9 +1,9 @@
 package Recursive.queen_again;
 
 /**
- * @Author PYJ
+ * @Author pan
+ * @Date 2020/4/13 10:45
  * @Description
- * @Date 2020/4/12 22:32
  * @Version 1.0
  **/
 public class Impl {
