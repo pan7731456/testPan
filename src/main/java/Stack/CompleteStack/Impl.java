@@ -16,10 +16,10 @@ public class Impl {
     public static void main(String[] args) {
         //String input = "3 * 4 + 5 * 6 - 10 / 5 + (4 + 3) * 6";
         //String input = "3 * 4 + 5 * 6 - 4 / 2 + 7 * 6"; // 12 + 30 - 2 + 42 = 82
-        String input = "3 + 2 * 6 - 2";
+        String input = "3 + 2 * 6 - 2 + 8 + 9 - 8 * 3";
         //对这一串数组实现计算机思维算法
-        CompleteStack completeStack = new CompleteStack();
-        int complete = completeStack.complete(input);
+        DealStack dealStack = new DealStack();
+        int complete = dealStack.deal(input);
         System.out.println(complete);
 
 
