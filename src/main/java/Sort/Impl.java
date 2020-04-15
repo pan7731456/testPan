@@ -4,11 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
-import static Sort.BubbleSort.bubbleSort;
-//import static Sort.InsertSort.insertSort;
-import static Sort.InsertSort_E.insertSort;
-import static Sort.SelectSort.selectSort;
-import static Sort.ShellSort_A.shellSort;
+import static Sort.ShellSort.shellSort;
 import static Sort.ValuesArray.valuesArray;
 
 /**
