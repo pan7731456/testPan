@@ -10,9 +10,10 @@ public class ShellSort {
 
     public static void shellSort(int[] values) {
         int temp;
+        int j;
         for (int gap = values.length / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < values.length; i++) {
-                int j = i;
+                j = i;
                 temp = values[i];
                 if (values[j - gap] > values[j]) {
                     while (j - gap >= 0 && temp < values[j - gap]) {
