@@ -45,17 +45,19 @@ public class DealStack {
                     throw new RuntimeException("空格前后都是数字，格式不满足");
                 }
                 continue;
-            } else if (c == ')') {
-//                System.out.println("递归进去 input:" + input);
-                int num = new DealStack().deal(input);
-//                System.out.println("递归结果是:" + num);
-                numStack.push(num);
-                preType = 0;
-                brackets = false;
-                input = "";
             } else if (brackets) {
+                if (c == ')') {
+                    System.out.println("递归进去 input:" + input);
+                    int num = new DealStack().deal(input);
+                    System.out.println("递归结果是:" + num);
+                    numStack.push(num);
+                    preType = 0;
+                    brackets = false;
+                    input = "";
+                }
                 //优先拼接括号内的字符，递归获取值
                 input += c;
+
             } else if (c == '(') {
                 //打开递归开关
                 brackets = true;
