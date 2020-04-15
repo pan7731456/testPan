@@ -29,17 +29,8 @@ public class SelectSort {
                 values[i] = values[minIndex];
                 values[minIndex] = temp;
             }
-            System.out.println("第"+ (i+1)+"次比较后：");
-            System.out.println(Arrays.toString(values));
+//            System.out.println("第"+ (i+1)+"次比较后：");
+//            System.out.println(Arrays.toString(values));
         }
-    }
-
-    public static void main(String[] args) {
-        int[] values = {56,78,11,1,5,20,66,103,76,100,88,41,6};
-        System.out.println("排序前：");
-        System.out.println(Arrays.toString(values));
-        selectSort(values);
-        System.out.println("排序后：");
-        System.out.println(Arrays.toString(values));
     }
 }

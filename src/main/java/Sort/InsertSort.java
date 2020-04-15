@@ -10,32 +10,24 @@ import java.util.Arrays;
  **/
 public class InsertSort {
 
-    public static void insertSort(int[] values){
+    public static void insertSort(int[] values) {
         /**
          * 思路，形成一个有序的列表，那么其中就是有序+无序，无序的后面自动添加到前面有序对应的位置
          */
 
         int temp = 0;
+        int index = 0;
         for (int i = 1; i < values.length; i++) { //待插入数遍历
-            for (int j = 0; j < i; j++) { //有序列表
-                if (values[j] > values[i]){
-                    temp = values[j];
-                    values[j] = values[i];
-                    values[i] = temp;
-                }
+            temp = values[i];
+            index = i;
+            while (index - 1 >= 0 && temp < values[index - 1]) { //类似希尔排序,gap = 1
+                values[index] = values[index - 1];
+                index--;
             }
-            System.out.println("第"+ (i+1)+"次比较后：");
-            System.out.println(Arrays.toString(values));
+            if (index != i) {
+                values[index] = temp;
+            }
         }
 
-    }
-
-    public static void main(String[] args) {
-        int[] values = {56,78,11,1,5,20,66,103,76,100,88,41,6};
-        System.out.println("排序前：");
-        System.out.println(Arrays.toString(values));
-        insertSort(values);
-        System.out.println("排序后：");
-        System.out.println(Arrays.toString(values));
     }
 }
