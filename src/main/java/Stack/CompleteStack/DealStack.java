@@ -33,6 +33,8 @@ public class DealStack {
          * 假定开始是前一位是符号，那么第一次set进去的就一定要是数字了
          */
         int preType = 1;
+        boolean brackets = false;
+        String input = ""; //拼接递归字符串
         for (int i = 0; i < charArray.length; i++) {
             char c = charArray[i];
             if (c == ' ') { //跳过空格
@@ -43,21 +45,30 @@ public class DealStack {
                     throw new RuntimeException("空格前后都是数字，格式不满足");
                 }
                 continue;
-            }
-            if (isNum(c)) {
+            } else if (c == ')') {
+//                System.out.println("递归进去 input:" + input);
+                int num = new DealStack().deal(input);
+//                System.out.println("递归结果是:" + num);
+                numStack.push(num);
+                preType = 0;
+                brackets = false;
+                input = "";
+            } else if (brackets) {
+                //优先拼接括号内的字符，递归获取值
+                input += c;
+            } else if (c == '(') {
+                //打开递归开关
+                brackets = true;
+            } else if (isNum(c)) {
                 //设置数字的时候不是直接push进去，直到判断后面那一位是字符了才push进去
-//                System.out.println("设置到多位数栈中" + ((int) c - 48));
                 amountStack.push((int) c - 48);
 
                 if ((i + 1) == charArray.length) {
                     //说明最后一个数
                     int amountNum = amountNum();
-//                    System.out.println("数字判断中取出的多位数:" + amountNum);
                     numStack.push(amountNum);
                 }
 
-
-//                numStack.push((int) c - 48); //转换为int需要-48
                 preType = 0;
                 continue;
             } else {
@@ -69,15 +80,11 @@ public class DealStack {
                 //多位数取到符号为止，符号之前的所有数字都取出，按照个十百的取出顺序获取对应的值
                 if (!amountStack.isEmpty()) {
                     int amountNum = amountNum();
-//                    System.out.println("取出的多位数:" + amountNum);
                     numStack.push(amountNum);
                 }
 
                 //符号需要做处理，如果上一个符号优先度大于现在的符号，说明需要先计算
                 //需要判断优先度
-//                    boolean b = priority((char) charStack.peek()) > priority(c);
-//                    System.out.println("当前符号:" + c + "结果是:" + b);
-//                    System.out.println("符号栈顶优先度:" + (char) charStack.peek() + "-" + priority((char) charStack.peek()) + " : " + c + "-" + priority(c));
                 while (!charStack.isEmpty() && priority((char) charStack.peek()) > priority(c)) {
                     //需要优先计算
                     char pre = (char) charStack.pop();
@@ -86,8 +93,6 @@ public class DealStack {
                     int result = calculate(num1, num2, pre);
                     System.out.println("优先计算 " + num2 + " " + pre + " " + num1 + " = " + result);
                     numStack.push(result); //设置结果
-
-//                    System.out.println();
                 }
                 preType = 1;
                 charStack.push(c);
@@ -103,7 +108,6 @@ public class DealStack {
             System.out.println("剩余计算 " + num2 + " " + pre + " " + num1 + " = " + result);
             numStack.push(result); //设置结果
         }
-
 
         return (int) numStack.pop();
     }
