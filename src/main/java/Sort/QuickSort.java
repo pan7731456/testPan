@@ -1,5 +1,7 @@
 package Sort;
 
+import java.util.Arrays;
+
 /**
  * @Author pan
  * @Date 2020/4/15 17:44
@@ -7,6 +9,10 @@ package Sort;
  * @Version 1.0
  **/
 public class QuickSort {
+
+    public static void quickSort(int[] values){
+        quickSort(values, 0 ,values.length - 1);
+    }
 
     /**
      * 快速排序
@@ -16,7 +22,7 @@ public class QuickSort {
      * @param leftIndex  左标识
      * @param rightIndex 右标识
      */
-    public static void quickSort(int[] values, int leftIndex, int rightIndex) {
+    private static void quickSort(int[] values, int leftIndex, int rightIndex) {
         int left = leftIndex;
         int right = rightIndex;
         /**
@@ -58,7 +64,7 @@ public class QuickSort {
                 left += 1;
             }
         }
-
+        System.out.println(Arrays.toString(values));
         //这边报错处理
         //说明至少有一个越界了，避免溢出处理
         if (left == right) {
