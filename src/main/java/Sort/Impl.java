@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.Date;
 
 import static Sort.BubbleSort.bubbleSort;
-import static Sort.InsertSort.insertSort;
+//import static Sort.InsertSort.insertSort;
+import static Sort.InsertSort_A.insertSort;
 import static Sort.SelectSort.selectSort;
 import static Sort.ValuesArray.valuesArray;
 
@@ -17,7 +18,7 @@ import static Sort.ValuesArray.valuesArray;
  **/
 public class Impl {
     public static void main(String[] args) {
-        int[] valuesArray = valuesArray(80);
+        int[] valuesArray = valuesArray(10);
         System.out.println("排序前——————");
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
