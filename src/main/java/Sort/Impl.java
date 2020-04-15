@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
+import static Sort.QuickSort.quickSort;
 import static Sort.ShellSort.shellSort;
 import static Sort.ValuesArray.valuesArray;
 
@@ -15,14 +16,15 @@ import static Sort.ValuesArray.valuesArray;
  **/
 public class Impl {
     public static void main(String[] args) {
-        int[] valuesArray = valuesArray(8);
+//        int[] valuesArray = valuesArray(8);
+        int[] valuesArray = {4,4,4,4,3,1,1,1,1};
         System.out.println("排序前——————");
         System.out.println(Arrays.toString(valuesArray));
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date1Str = simpleDateFormat.format(data1);
         System.out.println("排序前的时间是=" + date1Str);
-        shellSort(valuesArray);
+        quickSort(valuesArray, 0 , valuesArray.length - 1);
         System.out.println("排序后——————");
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
