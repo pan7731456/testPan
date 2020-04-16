@@ -6,7 +6,7 @@ import java.util.Date;
 
 import static Sort.MergeSort.mergeSort;
 import static Sort.QuickSort.quickSort;
-import static Sort.RedixSort_C.redixSort;
+import static Sort.RedixSort.redixSort;
 import static Sort.ShellSort.shellSort;
 import static Sort.ValuesArray.valuesArray;
 
