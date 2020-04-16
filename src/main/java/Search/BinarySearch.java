@@ -36,7 +36,7 @@ public class BinarySearch {
         //说明比中间值要小
         if (value < midVal) {
             return binarySearch(values, left, mid - 1, value);
-        } else if (value < midVal) {
+        } else if (value > midVal) {
             return binarySearch(values, mid + 1, right, value);
         } else {
             List<Integer> result = new ArrayList<>();
