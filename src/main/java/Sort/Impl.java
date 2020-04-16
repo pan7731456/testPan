@@ -6,7 +6,7 @@ import java.util.Date;
 
 import static Sort.MergeSort.mergeSort;
 import static Sort.QuickSort.quickSort;
-import static Sort.RedixSort_A.redixSort;
+import static Sort.RedixSort_C.redixSort;
 import static Sort.ShellSort.shellSort;
 import static Sort.ValuesArray.valuesArray;
 
@@ -18,7 +18,7 @@ import static Sort.ValuesArray.valuesArray;
  **/
 public class Impl {
     public static void main(String[] args) {
-        int[] valuesArray = valuesArray(18);
+        int[] valuesArray = valuesArray(20);
         //int[] valuesArray = {4,4,4,4,3,1,1,1,1};
         System.out.println("排序前——————");
         System.out.println(Arrays.toString(valuesArray));

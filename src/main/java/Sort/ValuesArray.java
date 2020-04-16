@@ -14,7 +14,7 @@ public class ValuesArray {
         Random random = new Random();
         int[] values = new int[max];
         for (int i = 0; i < max; i++) {
-            values[i] = random.nextInt(100);
+            values[i] = random.nextInt(10000);
         }
         return values;
     }
