@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static Search.BinarySearch.binarySearch;
+import static Search.BinarySearch_A.binarySearch;
 import static Sort.RedixSort.redixSort;
 import static Sort.ValuesArray.valuesArray;
 
@@ -17,8 +17,8 @@ import static Sort.ValuesArray.valuesArray;
  **/
 public class Impl {
     public static void main(String[] args) {
-        int[] valuesArray = valuesArray(20);
-        //int[] valuesArray = {4,4,4,4,3,1,1,1,1};
+//        int[] valuesArray = valuesArray(20);
+        int[] valuesArray = {1,1,1,1,1,1,21,1,3,4,5,6,8};
         System.out.println("排序前——————");
         System.out.println(Arrays.toString(valuesArray));
         Date data1 = new Date();
@@ -33,7 +33,7 @@ public class Impl {
         System.out.println(Arrays.toString(valuesArray));
 
         //查找数据
-        int value = valuesArray[3];
+        int value = 1;
 
         System.out.println("查找" + value + "所在的位置:" + binarySearch(valuesArray, value));
 
