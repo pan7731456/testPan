@@ -26,7 +26,7 @@ public class Impl {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date1Str = simpleDateFormat.format(data1);
         System.out.println("排序前的时间是=" + date1Str);
-        redixSort(valuesArray);
+        mergeSort(valuesArray);
         System.out.println("排序后——————");
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
