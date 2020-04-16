@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static Search.BinarySearch_A.binarySearch;
+import static Search.BinarySearch.binarySearch;
 import static Sort.RedixSort.redixSort;
 import static Sort.ValuesArray.valuesArray;
 
