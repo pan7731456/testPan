@@ -8,17 +8,17 @@ package Sort;
  **/
 public class InsertSort_D {
     public static void insertSort(int[] values) {
+
         int gap = 1;
-        int temp;
         int index;
+        int temp;
         for (int i = gap; i < values.length; i++) { //待插入数列
             temp = values[i];
             index = i;
-            while (index - gap >= 0 && values[index - gap] > values[index]) {
+            while (index - gap >= 0 && temp < values[index - gap]) {
                 values[index] = values[index - gap];
                 index -= gap;
             }
-
             if (index != i) {
                 values[index] = temp;
             }
