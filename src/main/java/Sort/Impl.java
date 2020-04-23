@@ -8,7 +8,7 @@ import static Sort.BubbleSort_C.bubbleSort;
 import static Sort.InsertSort_F.insertSort;
 import static Sort.MergeSort_B.mergeSort;
 import static Sort.QuickSort_B.quickSort;
-import static Sort.RedixSort.redixSort;
+import static Sort.RedixSort_A.redixSort;
 import static Sort.SelectSort_C.selectSort;
 import static Sort.ShellSort_A.shellSort;
 import static Sort.ValuesArray.valuesArray;
@@ -29,7 +29,7 @@ public class Impl {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date1Str = simpleDateFormat.format(data1);
         System.out.println("排序前的时间是=" + date1Str);
-        insertSort(valuesArray);
+        redixSort(valuesArray);
         System.out.println("排序后——————");
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
