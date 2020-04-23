@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 import static Sort.BubbleSort_C.bubbleSort;
-import static Sort.InsertSort_D.insertSort;
+import static Sort.InsertSort_F.insertSort;
 import static Sort.MergeSort_B.mergeSort;
 import static Sort.QuickSort_B.quickSort;
 import static Sort.RedixSort.redixSort;
