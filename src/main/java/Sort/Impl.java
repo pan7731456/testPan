@@ -4,13 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
-import static Sort.BubbleSort_C.bubbleSort;
-import static Sort.InsertSort_F.insertSort;
-import static Sort.MergeSort_B.mergeSort;
-import static Sort.QuickSort_B.quickSort;
-import static Sort.RedixSort_A.redixSort;
-import static Sort.SelectSort_C.selectSort;
-import static Sort.ShellSort_A.shellSort;
+import static Sort.BubbleSort.bubbleSort;
+import static Sort.InsertSort.insertSort;
+import static Sort.MergeSort.mergeSort;
+import static Sort.QuickSort.quickSort;
+import static Sort.RedixSort.redixSort;
+import static Sort.SelectSort.selectSort;
+import static Sort.ShellSort.shellSort;
 import static Sort.ValuesArray.valuesArray;
 
 /**
