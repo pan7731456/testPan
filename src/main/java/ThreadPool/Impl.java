@@ -1,6 +1,9 @@
 package ThreadPool;
 
 import java.util.concurrent.*;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
 
@@ -19,6 +22,20 @@ public class Impl {
 //        ExecutorService s2 = Executors.newCachedThreadPool();
 //        Executors.defaultThreadFactory();
 //        RejectedExecutionHandler defaultHandler = new ThreadPoolExecutor.AbortPolicy(); //拒绝策略
+//        Runtime.getRuntime().availableProcessors();
+//        final  ReentrantLock reentrantLock = new ReentrantLock();
+//        Condition condition = reentrantLock.newCondition();
+//
+//        new Thread(() -> {
+//            try {
+//                reentrantLock.lock();
+//                condition.signalAll();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            } finally {
+//                reentrantLock.unlock();
+//            }
+//        });
 
     }
 }
