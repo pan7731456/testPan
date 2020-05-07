@@ -3,7 +3,7 @@ package LeetCode.SubtreeAnotherTree;
 /**
  * @Author pan
  * @Date 2020/5/7 11:22
- * @Description
+ * @Description 512.另一个树的子树
  * @Version 1.0
  **/
 public class SubtreeAnotherTree {
