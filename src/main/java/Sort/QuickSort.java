@@ -10,8 +10,8 @@ import java.util.Arrays;
  **/
 public class QuickSort {
 
-    public static void quickSort(int[] values){
-        quickSort(values, 0 ,values.length - 1);
+    public static void quickSort(int[] values) {
+        quickSort(values, 0, values.length - 1);
     }
 
     /**
@@ -56,11 +56,11 @@ public class QuickSort {
             //如果交换完后，发现这个arr[l] == pivot值 相等 r--， 前移
 
             //这个必须，报错处理
-            if(values[left] == pivot) {
+            if (values[left] == pivot) {
                 right -= 1;
             }
             //如果交换完后，发现这个arr[r] == pivot值 相等 l++， 后移
-            if(values[right] == pivot) {
+            if (values[right] == pivot) {
                 left += 1;
             }
         }
@@ -72,11 +72,11 @@ public class QuickSort {
             right -= 1;
         }
         //向左递归
-        if(leftIndex < right) {
+        if (leftIndex < right) {
             quickSort(values, leftIndex, right);
         }
         //向右递归
-        if(rightIndex > left) {
+        if (rightIndex > left) {
             quickSort(values, left, rightIndex);
         }
     }

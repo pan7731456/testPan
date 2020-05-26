@@ -1,38 +1,33 @@
-package Sort;
+package Sort.Sort_Again;
 
 /**
  * @Author pan
- * @Date 2020/4/24 11:31
- * @Description 快速排序
+ * @Date 2020/5/26 14:15
+ * @Description 快速排序，使用递归思维
  * @Version 1.0
  **/
-public class QuickSort_A {
+public class QucikSort {
 
     public static void quickSort(int[] values) {
         quickSort(values, 0, values.length - 1);
     }
 
-    /**
-     * 快速排序
-     *
-     * @param values
-     * @param left
-     * @param right
-     */
     private static void quickSort(int[] values, int left, int right) {
+        //设置两个指针
         int l = left;
         int r = right;
-        int pivot = values[(left + right) / 2];
-
         int temp;
+        //中间值
+        int povit = values[(left + right) / 2];
+        //遍历其中的数据进行分拣
         while (l < r) {
-            while (values[l] < pivot) {
+            while (values[l] < povit) {
                 l++;
             }
-            while (values[r] > pivot) {
+            while (values[r] > povit) {
                 r--;
             }
-            //已完成排序
+            //跳出处理，这说明有一边已经找完了，这是最后的遍历点，再遍历就要越界了，需要跳出处理
             if (l >= r) {
                 break;
             }
@@ -40,16 +35,18 @@ public class QuickSort_A {
             temp = values[l];
             values[l] = values[r];
             values[r] = temp;
-            //这里靠背的，理解是需要避免死循环
-            if (values[l] == pivot) {
+            //这里需要跳过如果交换了中间值的位置情况
+            if (values[l] == povit) {
+                //说明右边遍历到了中间，然后交换了中间值，目前l是中间值
                 r--;
             }
-            if (values[r] == pivot) {
+            if (values[r] == povit) {
+                //同理
                 l++;
             }
         }
 
-        //死背，避免报错
+        //避免越界处理
         if (l == r) {
             l++;
             r--;
