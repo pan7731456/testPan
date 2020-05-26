@@ -8,9 +8,9 @@ package LeetCode.MaxProduct;
  **/
 public class Impl {
     public static void main(String[] args) {
-        MaxProduct maxProduct = new MaxProduct();
-        int[] nums = {2,3,-2,4};
-        int max = maxProduct.maxProduct(nums);
+        LeetCode leetCode = new LeetCode();
+        int[] nums = {2,3,0,-2,4};
+        int max = leetCode.maxProduct(nums);
         System.out.println(max);
     }
 }
