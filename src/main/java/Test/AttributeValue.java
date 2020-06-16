@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @Version 1.0
  **/
 @Data
-public class AttributeValue {
+public class AttributeValue implements Serializable{
 
     public enum ValueType {
         U, O

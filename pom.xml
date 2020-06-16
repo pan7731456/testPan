@@ -32,6 +32,18 @@
             <artifactId>org.eclipse.jgit</artifactId>
             <version>4.9.3.201807311005-r</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.3.7</version>
+        </dependency>
     </dependencies>
 
 

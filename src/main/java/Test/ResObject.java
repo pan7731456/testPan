@@ -2,6 +2,7 @@ package Test;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -12,7 +13,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 @Data
-public class ResObject {
+public class ResObject implements Serializable {
     /**
      * 属性值列表
      * Key: 属性编码， value：属性值对象

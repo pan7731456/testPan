@@ -1,5 +1,9 @@
 package Test;
 
+import Untils.DateUtil;
+import cn.hutool.core.util.ObjectUtil;
+import org.apache.commons.lang3.time.DateFormatUtils;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -12,9 +16,20 @@ import java.util.stream.Collectors;
 public class Impl {
 
     public static void main(String[] args) {
-        List<ResObject> strings = new ArrayList<>();
+//        Date now = new Date();
+//        Date maximum = DateUtil.getLastMonthTime(now, "min");
+//        String format = DateFormatUtils.format(maximum, "yyyy-MM-dd HH:mm");
+//        System.out.println(format);
+//        ResObject resObject = new ResObject();
+//
+//        ResObject clone = ObjectUtil.clone(resObject);
+//        System.out.println(clone == resObject);
 
-        List<Integer> collect = strings.stream().map(ResObject::hashCode).collect(Collectors.toList());
-        System.out.println();
+        char a = 'A';
+        char b = 'A';
+        StringBuilder index = new StringBuilder();
+        index.append(a).append(b);
+        System.out.println(index);
+
     }
 }
